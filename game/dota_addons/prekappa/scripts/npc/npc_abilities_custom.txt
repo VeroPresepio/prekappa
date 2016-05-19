@@ -3,16 +3,14 @@
 "DOTAAbilities"
 {
   "Version"   "1"
-  "inculata"
-  {
-  	// General  
-  	// ----------------------------------------------------------------------------------------
-  	"BaseClass"              "ability_datadriven"
-  	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELED"
-  	"AbilityTextureName"     "nyx_assassin_impale"
-  	"AbilityUnitDamageType"  "DAMAGE_TYPE_MAGICAL"
 
-  	"AbilityType"            "DOTA_ABILITY_TYPE_ULTIMATE"
+  "Fish Hook"
+  {
+  	"BaseClass"              "ability_datadriven"
+  	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT"
+  	"AbilityTextureName"     "pudge_meat_hook"
+
+  	"AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
   	"MaxLevel"               "1"
   	"RequiredLevel"          "0"
   	"LevelsBetweenUpgrades"  "0"
@@ -22,15 +20,75 @@
   	"AnimationPlaybackRate"  "1"
   	"AnimationIgnoresModelScale" "1"
 
-  	// Stats
-  	//----------------------------------------------------------------------------------------
-  	"AbilityDamage"           "0 0 0 0"
-  	"AbilityManaCost"         "0 0 0 0"
-  	"AbilityCooldown"         "5.0 3.5 2.5 1.0"
-  	"AbilityCastRange"        "0"
-  	"AbilityChannelTime"      "2.0 1.5 1.0 0.5"
-  	"AbilityChannelledManaCostPerSecond" "0 0 0 0"
+  	"AbilityDamage"           "0"
+  	"AbilityManaCost"         "3"
+  	"AbilityCooldown"         "10.0"
+  	"AbilityCastRange"        "1500"
+  }
 
-  	// ...
+  "Dash"
+  {
+  	"BaseClass"              "ability_datadriven"
+  	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  	"AbilityTextureName"     "darkseer_surge"
+
+  	"AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+  	"MaxLevel"               "1"
+  	"RequiredLevel"          "0"
+  	"LevelsBetweenUpgrades"  "0"
+
+  	"AbilityCastPoint"       "0.0"
+  	"AbilityCastAnimation"   "ACT_DOTA_CAST_ABILITY_2"
+  	"AnimationPlaybackRate"  "1"
+  	"AnimationIgnoresModelScale" "1"
+
+  	"AbilityDamage"           "0"
+  	"AbilityManaCost"         "1"
+  	"AbilityCooldown"         "5.0"
+  	"AbilityCastRange"        "0"
+  }
+
+  "Eat Fish"
+  {
+  	"BaseClass"              "ability_datadriven"
+  	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  	"AbilityTextureName"     "lion_hex"
+
+  	"AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+  	"MaxLevel"               "1"
+  	"RequiredLevel"          "0"
+  	"LevelsBetweenUpgrades"  "0"
+
+  	"AbilityCastPoint"       "0.0"
+  	"AbilityCastAnimation"   "ACT_DOTA_CAST_ABILITY_3"
+  	"AnimationPlaybackRate"  "1"
+  	"AnimationIgnoresModelScale" "1"
+
+  	"AbilityDamage"           "0"
+  	"AbilityManaCost"         "0"
+  	"AbilityCooldown"         "1.0"
+  	"AbilityCastRange"        "0"
+  }
+
+  "Walrus Push"
+  {
+  	"BaseClass"              "ability_datadriven"
+  	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  	"AbilityTextureName"     "tusk_walrus_punch"
+
+  	"AbilityType"            "DOTA_ABILITY_TYPE_ULTIMATE"
+  	"MaxLevel"               "1"
+  	"RequiredLevel"          "0"
+  	"LevelsBetweenUpgrades"  "0"
+
+  	"AbilityCastPoint"       "0.0"
+  	"AbilityCastAnimation"   "ACT_DOTA_CAST_ABILITY_4"
+  	"AnimationPlaybackRate"  "1"
+  	"AnimationIgnoresModelScale" "1"
+
+  	"AbilityDamage"           "0"
+  	"AbilityManaCost"         "1"
+  	"AbilityCooldown"         "5.0"
+  	"AbilityCastRange"        "250"
   }
 }

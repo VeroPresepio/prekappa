@@ -5,5 +5,5 @@
 
 "CustomHeroList"
 {
-  "npc_dota_hero_kunkka" "-1"
+  "npc_dota_hero_tusk" "-1"
 }
