@@ -4,7 +4,7 @@
 {
   "Version"   "1"
 
-  "Fish Hook"
+  "Fish_Hook"
   {
   	"BaseClass"              "ability_datadriven"
   	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT"
@@ -30,7 +30,7 @@
   {
   	"BaseClass"              "ability_datadriven"
   	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-  	"AbilityTextureName"     "darkseer_surge"
+  	"AbilityTextureName"     "dark_seer_surge"
 
   	"AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
   	"MaxLevel"               "1"
@@ -46,13 +46,64 @@
   	"AbilityManaCost"         "1"
   	"AbilityCooldown"         "5.0"
   	"AbilityCastRange"        "0"
+    "AbilityDuration"         "3.5"
+
+    "Precache"
+    {
+      "soundfile" "soundevents/villager.vsndevts"
+      "particle"  "particles/themed_fx/cny_fwks_spinner_fire.vpcf"
+    }
+
+    "OnSpellStart"
+    {
+      "ApplyModifier"
+       {
+        "ModifierName"  "modifier_dash"
+        "Target"  "CASTER"
+       }
+
+       "FireSound"
+       {
+         "EffectName"  "FishingMadness.VillagerDash"
+         "Target"    "CASTER"
+       }
+
+    }
+
+
+    "Modifiers"
+    {
+      "modifier_dash"
+      {
+          "Attributes"       "MODIFIER_ATTRIBUTE_NONE"
+          "Duration"         "3.5"
+          "Passive"          "0"
+          "TextureName"      "dark_seer_surge"
+
+          "IsDebuff"         "0"
+          "IsHidden"         "0"
+          "IsPurgable"       "0"
+
+          "EffectName"       "particles/themed_fx/cny_fwks_spinner_fire.vpcf"
+          "EffectAttachType"  "follow_origin"
+
+          // "StatusEffectName"     "particles/status_fx/status_effect_frost_lich.vpcf"
+          // "StatusEffectPriority" "10"
+
+          "Properties"
+          {
+              "MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" "522"
+          }
+      }
+    }
+
   }
 
-  "Eat Fish"
+  "Eat_Fish"
   {
   	"BaseClass"              "ability_datadriven"
   	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-  	"AbilityTextureName"     "lion_hex"
+  	"AbilityTextureName"     "lion_voodoo_fish"
 
   	"AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
   	"MaxLevel"               "1"
@@ -70,11 +121,11 @@
   	"AbilityCastRange"        "0"
   }
 
-  "Walrus Push"
+  "Walrus_Push"
   {
   	"BaseClass"              "ability_datadriven"
   	"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-  	"AbilityTextureName"     "tusk_walrus_punch"
+  	"AbilityTextureName"     "tusk_walrus_kick"
 
   	"AbilityType"            "DOTA_ABILITY_TYPE_ULTIMATE"
   	"MaxLevel"               "1"
